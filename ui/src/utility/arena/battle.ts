@@ -4,12 +4,18 @@ export const battle = (packageId: string, heroId: string, arenaId: string) => {
   const tx = new Transaction();
   
   // TODO: Add moveCall to start a battle
-  // Function: `${packageId}::arena::battle`
+  tx.moveCall({
+    target : `${packageId}::arena::battle`,
+    arguments: [tx.object(heroId) , tx.object(arenaId)], 
+
+  });
+  // Function: `${packageId}::arena::create_arena``
   // Arguments: heroId (object), arenaId (object)
     // Hints:
     // Use tx.object() for both hero and battle place objects
     // The battle winner is determined by hero power comparison
     // Winner takes both heroes
+    
   
   return tx;
 };
