@@ -13,7 +13,7 @@ export const createHero = (
     target: `${packageId}::arena::create_hero`,
     arguments: [
       tx.pure.string(name),
-      tx.pure.u64(imageUrl),
+      tx.pure.string(imageUrl),
       tx.pure.u64(BigInt(power)),
     ],
     
