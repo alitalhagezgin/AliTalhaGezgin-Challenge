@@ -10,7 +10,7 @@ export const createHero = (
 
   // TODO: Add moveCall to create a hero
   tx.moveCall({
-    target: `${packageId}::arena::create_hero`,
+    target: `${packageId}::hero::create_hero`,
     arguments: [
       tx.pure.string(name),
       tx.pure.string(imageUrl),
